@@ -2,4 +2,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def blogs(request):
-    return render (request, 'blogs.html')
+    return render (request, 'blogs/blogs.html')
