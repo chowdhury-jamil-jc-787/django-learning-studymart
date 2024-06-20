@@ -7,5 +7,28 @@
 </head>
 <body>
     <h1>This is {{what}} page no 1. {{dt}} course</h1>
+    <h2>{{dt|upper}}</h2>
+    <h2>{{dt|capfirst}}</h2>
+    <h2>{{dt|length}}</h2>
+
+    {% if dt %}
+    <h3>ok</h3>
+    {% else %}
+    <h3>not ok</h3>
+    {% endif %}
+
+
+    {% if dt == 'djang template language' %}
+    <h3>ok</h3>
+    {% elif dt == 'django template language' %}
+    <h3>middle ok</h3>
+    {% else %}
+    <h3>not ok</h3>
+    {% endif %}
+
+
+    {% for tn in teachers reversed %}
+    {{ forloop.counter }} {{ tn }} <br>
+    {% endfor %}
 </body>
 </html>

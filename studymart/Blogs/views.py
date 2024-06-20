@@ -3,5 +3,6 @@ from django.http import HttpResponse
 
 def blogs(request):
     dtl = 'django template language'
-    page = {'what':'Blogs', 'dt': dtl}
+    Teachers = ['Ravi', 'Rajesh', 'Rahul', 'Rohit']
+    page = {'what':'Blogs', 'dt': dtl, 'teachers': Teachers}
     return render (request, 'blogs/blogs.html', context=page)
